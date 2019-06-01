@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            var number = prompt('Nhap vao so luong so nguyen to can tim')
+            var count = 0
+            var N = 2
+
+            while(count < number){
+            //bien Flag - Co de bat len khi so N la so nguyen to
+            var lasonguyento = true;
+            //di tim so nguyen to
+            for(var i = 2; i<= N-1; i++){
+                if(N%i == 0){
+                    lasonguyento = false;
+                }                
+            }
+            //check Flag so nguyen to thi dem va in ra
+            if(lasonguyento){
+                document.write(N+', ');
+                count++;
+            }
+            N++;
+        }
+    </script>
+</body>
+</html>
